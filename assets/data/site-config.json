@@ -64,7 +64,7 @@
       "",
       "",
       "assets/img/mri1foz2tsqbsz_zxm_sbg.jpg",
-      "assets/img/img_9156.jpg",
+      "",
       "assets/img/unadjustednonraw_thumb_25be.jpg",
       "assets/img/img_5284.jpg"
     ],
@@ -73,7 +73,7 @@
       "assets/img/6858121a-f92d-4ba4-916b-1def9615760d.jpg",
       "assets/img/kaylabowenphotography-261.jpg",
       "assets/img/img_7396.jpg",
-      "assets/img/img_2868.jpg",
+      "assets/img/img_9156.jpg",
       "assets/img/unadjustednonraw_thumb_25b9.jpg"
     ],
     "logo": ""
@@ -260,8 +260,7 @@
         "Dance floor lighting & up-lights",
         "Unlimited consultations"
       ],
-      "img": "serviceWedding",
-      "link": "packages.html"
+      "img": "serviceWedding"
     },
     {
       "no": "C.02",
@@ -273,8 +272,7 @@
         "MC for programs & awards",
         "Planning coordination"
       ],
-      "img": "serviceCorporate",
-      "link": "#inquire"
+      "img": "serviceCorporate"
     },
     {
       "no": "P.03",
@@ -286,8 +284,7 @@
         "Dance floor lighting",
         "Online planning portal"
       ],
-      "img": "servicePrivate",
-      "link": "packages.html"
+      "img": "servicePrivate"
     }
   ],
   "venues": {
@@ -378,7 +375,7 @@
     },
     {
       "q": "What is \"Beyond The Aisle\"?",
-      "a": "A content-creation add-on included in The Lakes package: candid, social-ready video captured at your event — your highlights, ready for Instagram and TikTok."
+      "a": "A content-creation add-on included in The Lakes package: They specialize in telling unforgettable wedding stories through short form video and photo content all captured on an iPhone. "
     }
   ],
   "socials": [
@@ -528,7 +525,7 @@
       }
     ]
   },
-  "savedAt": 1781644709099,
+  "savedAt": 1781649789145,
   "header": {
     "index": {
       "height": 240,
