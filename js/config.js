@@ -130,19 +130,23 @@ window.SITE_CONFIG_READY = (async () => {
   }
 
   /* ── services ── */
+  // Default click targets by title — guarantees the cards stay clickable even
+  // if an editor save drops the per-service link from the config.
+  const SERVICE_LINKS = { 'Weddings': 'packages.html', 'Private Events': 'packages.html', 'Corporate': '#inquire' };
   const svcGrid = document.querySelector('.services-grid');
   if (svcGrid && Array.isArray(cfg.services)) {
     svcGrid.innerHTML = cfg.services.map(s => {
+      const link = s.link || SERVICE_LINKS[s.title] || '';
       const inner = `
         <div class="service-img"><img src="${esc(imgs[s.img] || s.img)}" data-cfg-img="${esc(s.img)}" alt="${esc(s.title)}"></div>
         <div class="service-body">
           <span class="service-no">${esc(s.no)}</span>
-          <h3>${esc(s.title)} ${s.link ? '<span class="service-arrow" aria-hidden="true">→</span>' : ''}</h3>
+          <h3>${esc(s.title)} ${link ? '<span class="service-arrow" aria-hidden="true">→</span>' : ''}</h3>
           <p>${esc(s.desc)}</p>
           <ul>${(s.features || []).map(f => `<li>${esc(f)}</li>`).join('')}</ul>
         </div>`;
-      return s.link
-        ? `<a class="service-card tilt" data-tilt-max="8" href="${esc(s.link)}">${inner}</a>`
+      return link
+        ? `<a class="service-card tilt" data-tilt-max="8" href="${esc(link)}">${inner}</a>`
         : `<article class="service-card tilt" data-tilt-max="8">${inner}</article>`;
     }).join('');
   }
