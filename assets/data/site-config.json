@@ -260,7 +260,8 @@
         "Dance floor lighting & up-lights",
         "Unlimited consultations"
       ],
-      "img": "serviceWedding"
+      "img": "serviceWedding",
+      "link": "packages.html"
     },
     {
       "no": "C.02",
@@ -272,7 +273,8 @@
         "MC for programs & awards",
         "Planning coordination"
       ],
-      "img": "serviceCorporate"
+      "img": "serviceCorporate",
+      "link": "#inquire"
     },
     {
       "no": "P.03",
@@ -284,7 +286,8 @@
         "Dance floor lighting",
         "Online planning portal"
       ],
-      "img": "servicePrivate"
+      "img": "servicePrivate",
+      "link": "packages.html"
     }
   ],
   "venues": {
