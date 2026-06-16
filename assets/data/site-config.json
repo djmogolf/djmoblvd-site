@@ -1,0 +1,558 @@
+{
+  "_readme": "Everything editable on the site lives here. Edit by hand or use admin.html (the visual editor). Colors are any CSS color. Images are paths under assets/img/ — drop new files in that folder and reference them here. Reels are full Instagram reel URLs.",
+  "theme": {
+    "preset": "blvd-classic-light",
+    "bg": "#fdfdfb",
+    "bg2": "#f2f1ed",
+    "ink": "#142617",
+    "inkDim": "#51604f",
+    "accent": "#1e5a33",
+    "accent2": "#3fa56e",
+    "line": "rgba(20,38,23,.14)"
+  },
+  "text": {
+    "heroEyebrow": "Las Vegas · Weddings · Corporate · Private Events",
+    "heroTagline": "Music that creates your most precious moments.",
+    "heroEnd": "Turn the night <em>all the way up.</em>",
+    "aboutLede": "It was inevitable for DJ Mo and the entertainment business to meet.",
+    "vibesSub": "Straight from the reels — tap for sound.",
+    "heroTitle1": "DJ MO",
+    "heroTitle2": "BLVD",
+    "marquee": "Weddings ✦ Corporate Events ✦ Private Parties ✦ Las Vegas ✦ ",
+    "aboutP1": "Mo was 20 years old when he downloaded a DJ app onto his iPad. Playing in front of people brought out a different element — and DJ'ing became the thing that truly makes him happy. He cut his teeth at Helen Fitzgerald's in St. Louis, learning the fundamentals of being a great MC and DJ, before taking his craft into the wedding industry.",
+    "aboutP2": "Today, based in Las Vegas, he blends those fundamentals with a style all his own. His song selection, energy, enthusiasm, and versatility make him one of the most entertaining wedding and corporate event DJs in the city.",
+    "aboutQuote": "Anyone can put together chart-topping songs and press play — but it takes a <em>special set of ears</em> to hear sounds before loading them into the deck.",
+    "aboutQuoteBy": "— DJ Mo",
+    "aboutBadge": "Est. St. Louis → Las Vegas",
+    "cinemaQuote": "It takes a special set of ears to hear sounds before loading them into the deck.",
+    "venuesKicker": "Trusted on the Strip & beyond",
+    "venuesTitle": "Rooms DJ Mo has rocked",
+    "venuesNote": "From ballroom weddings to stadium-scale corporate events — and destination dates from Miami Beach to Northern California.",
+    "galleryCta": "Tag @djmoblvd to be featured on our Instagram",
+    "reelMore": "Want more? lifestyle on YouTube →",
+    "availLede": "",
+    "availBody": " Lock it in before someone else does — popular dates go fast 6–12 months out.",
+    "reviewsTrust": "★★★★★  100% recommended · Featured on The Knot",
+    "footerLine": "Las Vegas, NV · DJ'ing for you & only you",
+    "brand": "Dj&nbsp;Mo&nbsp;<em>Blvd</em>",
+    "navInquire": "Inquire",
+    "scrollCue": "Scroll",
+    "reelPlayLabel": "Play the reel · with sound",
+    "tapForSound": "tap for sound",
+    "djepTitle": "Information request",
+    "djepSub": "Fill this out and it lands directly in DJ Mo's event system — you'll hear back fast.",
+    "footerFine": "© {year} DJ Mo Blvd LLC. All rights reserved.",
+    "alacarteNote": "Build your own experience — every add-on can be attached to any package.",
+    "backToSite": "← Back to the main site",
+    "portalLoginTitle": "Log in",
+    "portalGuestTitle": "Guest song requests",
+    "portalLoginBtn": "Log On",
+    "portalGuestBtn": "Open the request system →",
+    "portalForgot": "Forgot your password?",
+    "portalNotBooked": "Not booked yet? <a href=\"index.html#inquire\">Check your date here</a>.",
+    "portalGuestFeatures": "Request songs before the event\nVote on what gets played\nNo account needed"
+  },
+  "images": {
+    "aboutPortrait": "assets/img/7cea8724-6040-4b8d-b558-ffa1694414c7.jpg",
+    "serviceWedding": "assets/img/img_0138.jpg",
+    "serviceCorporate": "assets/img/img-2014.jpg",
+    "servicePrivate": "assets/img/img_7726.jpg",
+    "gallery": [
+      "assets/img/309039795_3364987257067188_8626491957092069951_n.jpg",
+      "",
+      "",
+      "",
+      "",
+      "assets/img/mri1foz2tsqbsz_zxm_sbg.jpg",
+      "assets/img/img_9156.jpg",
+      "assets/img/unadjustednonraw_thumb_25be.jpg",
+      "assets/img/img_5284.jpg"
+    ],
+    "insta": [
+      "assets/img/img_7726.jpg",
+      "assets/img/6858121a-f92d-4ba4-916b-1def9615760d.jpg",
+      "assets/img/kaylabowenphotography-261.jpg",
+      "assets/img/img_7396.jpg",
+      "assets/img/img_2868.jpg",
+      "assets/img/unadjustednonraw_thumb_25b9.jpg"
+    ],
+    "logo": ""
+  },
+  "reels": [
+    {
+      "src": "assets/video/reels/ig-DYmlCNWIBu7.mp4",
+      "poster": "assets/video/reels/ig-DYmlCNWIBu7-poster.jpg",
+      "link": "https://www.instagram.com/reel/DYmlCNWIBu7/",
+      "label": "Five Guys Games"
+    },
+    {
+      "src": "assets/video/reels/reel4.mp4",
+      "poster": "assets/video/reels/reel4-poster.jpg",
+      "link": "https://www.instagram.com/reel/DF9dxrRRMNA/",
+      "label": "Love you all"
+    },
+    {
+      "src": "assets/video/reels/ig-CuNVN9XuSUQ.mp4",
+      "poster": "assets/video/reels/ig-CuNVN9XuSUQ-poster.jpg",
+      "link": "https://www.instagram.com/reel/CuNVN9XuSUQ/",
+      "label": "Congratulations Lily"
+    }
+  ],
+  "reelsLibrary": {
+    "_note": "More of Mo's reels, by plays as of 2026-06-11 — swap any of these into the reels list above.",
+    "onStage152k": "https://www.instagram.com/reel/DHpXGMLRa8f/",
+    "justMarried99k": "https://www.instagram.com/reel/DZK9wE8SL9z/",
+    "goodNews15k": "https://www.instagram.com/reel/DXpg3lski18/",
+    "moreGreens9k": "https://www.instagram.com/reel/DYp9w7ry9Ni/",
+    "brideRuns8k": "https://www.instagram.com/reel/DWz1-jtjUCM/",
+    "brideVision8k": "https://www.instagram.com/reel/DZONtEMhqQA/",
+    "sunsetCeremony7k": "https://www.instagram.com/reel/DXZXeycD8te/",
+    "soundCheckView4k": "https://www.instagram.com/reel/DXpsEV2gYUC/",
+    "wipaVegas3k": "https://www.instagram.com/reel/C8n3trqxjp3/",
+    "lilMo2k": "https://www.instagram.com/reel/DYmlCNWIBu7/"
+  },
+  "themePresets": {
+    "blvd-green-dark": {
+      "label": "Blvd Green · Dark",
+      "bg": "#060a07",
+      "bg2": "#0b120d",
+      "ink": "#f4f8f4",
+      "inkDim": "#9cab9e",
+      "accent": "#3fb56e",
+      "accent2": "#a5ecbe",
+      "line": "rgba(150,190,160,.16)"
+    },
+    "blvd-classic-light": {
+      "label": "Blvd Classic · White & Green",
+      "bg": "#fdfdfb",
+      "bg2": "#f2f1ed",
+      "ink": "#142617",
+      "inkDim": "#51604f",
+      "accent": "#1e5a33",
+      "accent2": "#3fa56e",
+      "line": "rgba(20,38,23,.14)"
+    },
+    "vegas-blue-dark": {
+      "label": "Vegas Blue · Dark",
+      "bg": "#06070b",
+      "bg2": "#0b0d14",
+      "ink": "#f2f4f8",
+      "inkDim": "#9aa3b5",
+      "accent": "#5b8cff",
+      "accent2": "#7ce8ff",
+      "line": "rgba(140,160,200,.16)"
+    }
+  },
+  "mainReel": {
+    "src": "assets/video/reel.mp4",
+    "poster": "assets/video/poster.jpg"
+  },
+  "_v": 2,
+  "sequences": {
+    "hero": {
+      "dir": "assets/frames/hero",
+      "count": 120,
+      "label": "Header video (scroll cinema)"
+    }
+  },
+  "modes": {
+    "night": "blvd-green-dark",
+    "day": "blvd-classic-light"
+  },
+  "inquireUrl": "https://blvddjs.djmoblvd.com/request_information.asp",
+  "spacing": {
+    "section": 7.5
+  },
+  "fonts": {
+    "display": "Inter",
+    "body": "Inter"
+  },
+  "nav": [
+    {
+      "label": "About",
+      "href": "index.html#about"
+    },
+    {
+      "label": "Services",
+      "href": "index.html#services"
+    },
+    {
+      "label": "Reel",
+      "href": "index.html#reel"
+    },
+    {
+      "label": "Packages",
+      "href": "packages.html"
+    },
+    {
+      "label": "Reviews",
+      "href": "index.html#reviews"
+    },
+    {
+      "label": "FAQ",
+      "href": "index.html#faq"
+    },
+    {
+      "label": "Client Login",
+      "href": "clients.html"
+    }
+  ],
+  "sectionTitles": {
+    "about": [
+      "The man",
+      "behind the decks"
+    ],
+    "services": [
+      "Three ways",
+      "to move a room"
+    ],
+    "reel": [
+      "Hear it",
+      "for yourself"
+    ],
+    "vibes": [
+      "Drop",
+      "the needle"
+    ],
+    "process": [
+      "Booking,",
+      "step by step"
+    ],
+    "reviews": [
+      "Word on",
+      "the boulevard"
+    ],
+    "faq": [
+      "Before",
+      "you ask"
+    ],
+    "instagram": [
+      "",
+      ""
+    ],
+    "alacarte": [
+      "À la carte",
+      "add-ons"
+    ]
+  },
+  "stats": [
+    {
+      "big": "LV",
+      "small": "Based in Las Vegas, travels anywhere"
+    },
+    {
+      "big": "DJ+MC",
+      "small": "Full professional emcee services"
+    },
+    {
+      "big": "100%",
+      "small": "For you & only you"
+    }
+  ],
+  "services": [
+    {
+      "no": "W.01",
+      "title": "Weddings",
+      "desc": "From the processional to the last dance — ceremony audio, cocktail hour, wireless mics for your vows, and a dance floor that never empties.",
+      "features": [
+        "On-site ceremony music",
+        "Professional emcee",
+        "Dance floor lighting & up-lights",
+        "Unlimited consultations"
+      ],
+      "img": "serviceWedding"
+    },
+    {
+      "no": "C.02",
+      "title": "Corporate",
+      "desc": "Conference energy, brand activations, award nights and arena-scale productions. Polished, on-brand, and engineered to keep your people locked in.",
+      "features": [
+        "Full professional sound",
+        "Stage & production experience",
+        "MC for programs & awards",
+        "Planning coordination"
+      ],
+      "img": "serviceCorporate"
+    },
+    {
+      "no": "P.03",
+      "title": "Private Events",
+      "desc": "Any excuse to celebrate. Custom playlists built around you and your crowd.",
+      "features": [
+        "Customized music playlist",
+        "High-energy hosting",
+        "Dance floor lighting",
+        "Online planning portal"
+      ],
+      "img": "servicePrivate"
+    }
+  ],
+  "venues": {
+    "rowA": [
+      "Bellagio",
+      "Caesars Palace",
+      "Aria",
+      "Encore",
+      "Fontainebleau",
+      "Allegiant Stadium",
+      "Four Seasons",
+      "Hakkasan",
+      "The Summit ",
+      "Green Valley Ranch ",
+      "Dragon Ridge "
+    ],
+    "rowB": [
+      "Golden Nugget",
+      "Circa",
+      "Omnia",
+      "Green Valley Ranch",
+      "Delano",
+      "Brooklyn Bowl",
+      "Cascata Golf Club",
+      "Dragon Ridge"
+    ]
+  },
+  "process": [
+    {
+      "title": "Check your date",
+      "desc": "Send the inquiry form with your date and venue. You'll hear back fast — popular dates go first."
+    },
+    {
+      "title": "Consult",
+      "desc": "Unlimited consultations. Talk vibe, must-plays, do-not-plays, and every moment that matters to you."
+    },
+    {
+      "title": "Plan",
+      "desc": "Build your timeline and custom playlist in the online planning portal — everything coordinated before the big day."
+    },
+    {
+      "title": "Party",
+      "desc": "DJ Mo handles the music, the mic, and the lighting. You handle the dance floor."
+    }
+  ],
+  "reviews": [
+    {
+      "quote": "Thanks for making our event the best!! It was beyond our imagination.",
+      "name": "Patty"
+    },
+    {
+      "quote": "The best at making any night one to remember on the dance floor! Plays the best music that is always a crowd favorite!",
+      "name": "Zoey"
+    },
+    {
+      "quote": "OMG!!!! You killed it! Thank you so much.",
+      "name": "Rami"
+    },
+    {
+      "quote": "Thank you for being so amazing the day of our wedding. We truly appreciate your amazing energy and music!",
+      "name": "Lisa"
+    },
+    {
+      "quote": "The music was perfect all night!!",
+      "name": "Kellie"
+    }
+  ],
+  "faq": [
+    {
+      "q": "Do you take song requests?",
+      "a": "Every package includes a customized personal playlist. We build your must-play and do-not-play lists together in unlimited consultations — and Mo reads the room from there."
+    },
+    {
+      "q": "Will you MC our announcements?",
+      "a": "Yes — professional emcee services come standard in every package. Grand entrance, toasts, first dance, send-off: every moment is announced and on time."
+    },
+    {
+      "q": "Can you cover our ceremony too?",
+      "a": "The Paradise package and up include on-site ceremony music — so every word is heard in the back row."
+    },
+    {
+      "q": "What does pricing look like?",
+      "a": "Three packages — Anthem from $2,000, Paradise from $2,500, and The Lakes from $4,000 — plus à la carte add-ons like photo booth, cold sparklers, and dancing on the clouds. See the full <a href=\"packages.html\">packages & pricing page</a>."
+    },
+    {
+      "q": "Do you travel outside Las Vegas?",
+      "a": "Based in Las Vegas, available anywhere. DJ Mo has played destination events from Miami Beach to Northern California."
+    },
+    {
+      "q": "What is \"Beyond The Aisle\"?",
+      "a": "A content-creation add-on included in The Lakes package: candid, social-ready video captured at your event — your highlights, ready for Instagram and TikTok."
+    }
+  ],
+  "socials": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/djmoblvd/"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@djmoblvd"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/c/DJMoBlvd"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/DjMoBlvd/"
+    },
+    {
+      "label": "Google",
+      "url": "https://www.google.com/search?q=DJ+Mo+Blvd+Las+Vegas"
+    },
+    {
+      "label": "Spotify",
+      "url": "https://open.spotify.com/search/DJ%20Mo%20Blvd"
+    }
+  ],
+  "packagesPage": {
+    "heroTitle": [
+      "Our",
+      "packages"
+    ],
+    "heroBody": "Thank you for considering us to be a part of your special day. Explore our meticulously crafted packages — designed as a foundation and fully customizable — and envision the experience waiting for you.",
+    "packages": [
+      {
+        "name": "Anthem",
+        "price": "$2,000",
+        "flag": "",
+        "features": [
+          "DJ services",
+          "Professional emcee",
+          "Unlimited pre-wedding consultations",
+          "Up to four hours of reception services",
+          "Dance floor lighting",
+          "Online planning coordination"
+        ]
+      },
+      {
+        "name": "Paradise",
+        "price": "$2,500",
+        "flag": "Signature",
+        "features": [
+          "DJ services",
+          "Professional emcee",
+          "Unlimited pre-wedding consultations",
+          "On-site ceremony music",
+          "Cocktail hour",
+          "Six hours of services",
+          "Dance floor lighting",
+          "Online planning coordination"
+        ]
+      },
+      {
+        "name": "The Lakes",
+        "price": "$4,000",
+        "flag": "",
+        "features": [
+          "DJ services",
+          "Professional emcee",
+          "Unlimited pre-wedding consultations",
+          "On-site ceremony music",
+          "Cocktail hour",
+          "Six hours of services",
+          "Dance floor lighting",
+          "10 up-lights",
+          "Content creator — Beyond The Aisle",
+          "Custom event + online planning coordination"
+        ]
+      }
+    ],
+    "alacarte": [
+      {
+        "name": "Dance floor lights",
+        "price": "$350"
+      },
+      {
+        "name": "Up-lights",
+        "price": "$35 / light"
+      },
+      {
+        "name": "Photo booth",
+        "price": "$850",
+        "tag": "Most booked"
+      },
+      {
+        "name": "Dancing on the clouds",
+        "price": "$550",
+        "tag": "First dance magic"
+      },
+      {
+        "name": "Cold sparklers",
+        "price": "$400 each",
+        "tag": "Crowd favorite"
+      },
+      {
+        "name": "Fog cannons",
+        "price": "$500 each"
+      },
+      {
+        "name": "Content creator",
+        "price": "$1,000"
+      },
+      {
+        "name": "MC",
+        "price": "$350"
+      },
+      {
+        "name": "Ceremony audio",
+        "price": "$500"
+      },
+      {
+        "name": "Cocktail hour",
+        "price": "$350"
+      },
+      {
+        "name": "Reception",
+        "price": "$1,200"
+      },
+      {
+        "name": "Additional speakers",
+        "price": "$250 each"
+      },
+      {
+        "name": "Overtime",
+        "price": "$625 / hour"
+      }
+    ],
+    "pkgFaq": [
+      {
+        "q": "How far in advance should I book?",
+        "a": "As early as possible to secure your date — popular dates fill up quickly. We advise booking at least 6–12 months in advance."
+      },
+      {
+        "q": "Can I customize elements within the packages?",
+        "a": "Absolutely. The packages are designed as a foundation, and we welcome customization to tailor the experience — mix in any à la carte add-on."
+      }
+    ]
+  },
+  "savedAt": 1781644709099,
+  "header": {
+    "index": {
+      "height": 240,
+      "width": 100,
+      "shift": 0,
+      "navDown": 25
+    },
+    "packages": {
+      "height": 60,
+      "width": 100,
+      "shift": 0,
+      "navDown": 0
+    },
+    "clients": {
+      "height": 60,
+      "width": 100,
+      "shift": 0,
+      "navDown": 0
+    }
+  },
+  "seo": {
+    "siteUrl": "https://djmoblvd.com",
+    "title": "Las Vegas Wedding DJ | DJ Mo Blvd — Weddings, Corporate & Private Events",
+    "description": "DJ Mo Blvd is a top-rated Las Vegas wedding DJ and MC for weddings, corporate events, and private parties. 5-star reviews and unforgettable dance floors. Check your date today.",
+    "businessName": "DJ Mo Blvd",
+    "priceRange": "$2,000 - $4,000",
+    "ratingValue": "5.0",
+    "reviewCount": "35"
+  }
+}
