@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Portal & Song Requests | DJ Mo Blvd Las Vegas</title>
+<meta name="description" content="DJ Mo Blvd client portal — log in to plan your Las Vegas event timeline and playlist, or send song requests as a guest.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..900;1,9..144,300..700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://djmoblvd.com/clients.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DJ Mo Blvd">
+<meta property="og:title" content="Client Portal & Song Requests | DJ Mo Blvd Las Vegas">
+<meta property="og:description" content="DJ Mo Blvd client portal — log in to plan your Las Vegas event timeline and playlist, or send song requests as a guest.">
+<meta property="og:url" content="https://djmoblvd.com/clients.html">
+<meta property="og:image" content="https://djmoblvd.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Client Portal & Song Requests | DJ Mo Blvd Las Vegas">
+<meta name="twitter:description" content="DJ Mo Blvd client portal — log in to plan your Las Vegas event timeline and playlist, or send song requests as a guest.">
+<meta name="twitter:image" content="https://djmoblvd.com/assets/og-image.jpg">
+<meta name="geo.region" content="US-NV">
+<meta name="geo.placename" content="Las Vegas">
+<meta name="theme-color" content="#006747">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="assets/img/djmologo.png">
+<style>
+  .portal-hero{min-height:var(--hd-h-clients,100svh);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:6rem var(--section-x) 2rem;text-align:center}
+  .portal-hero>*{position:relative;top:calc(var(--hd-shift-clients,0px) * -1);max-width:var(--hd-w-clients,100%)}
+  .portal-hero h1{font-family:var(--font-d);font-weight:400;text-transform:uppercase;font-size:clamp(2.6rem,8vw,5.5rem);line-height:1}
+  .portal-hero h1 em{font-style:italic;font-weight:400;color:var(--accent-2)}
+  .portal-hero p{max-width:54ch;margin:1.4rem auto 0;color:var(--ink-dim)}
+  .portal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem);max-width:980px;margin:0 auto;padding:calc(var(--section-y)*0.4) var(--section-x) var(--section-y)}
+  @media (max-width:760px){.portal-grid{grid-template-columns:1fr}}
+  .portal-card{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:clamp(1.5rem,3vw,2.2rem)}
+  .portal-card h2{font-family:var(--font-d);font-weight:400;font-size:1.4rem;text-transform:uppercase;margin-bottom:.4rem}
+  .portal-card .sub{font-size:.85rem;color:var(--ink-dim);margin-bottom:1.4rem}
+  .portal-card label{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-dim);margin:1rem 0 .35rem}
+  .portal-card input[type=text],.portal-card input[type=password]{
+    width:100%;background:color-mix(in srgb, var(--ink) 4%, transparent);border:1px solid var(--line);border-radius:8px;
+    color:var(--ink);padding:.8em 1em;font-family:var(--font-b);font-size:1rem;
+  }
+  .portal-card input:focus{outline:none;border-color:var(--accent)}
+  .portal-btn{
+    display:inline-block;width:100%;text-align:center;margin-top:1.4rem;cursor:pointer;
+    font-family:var(--font-b);font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;
+    border:1px solid var(--accent);background:var(--accent);color:#06140b;font-weight:600;
+    border-radius:99px;padding:1em 0;transition:box-shadow .3s,background .3s;
+  }
+  .portal-btn:hover{box-shadow:0 0 30px color-mix(in srgb, var(--accent) 45%, transparent)}
+  .portal-btn.ghost{background:none;color:var(--ink)}
+  .portal-fine{margin-top:1rem;text-align:center;font-size:.8rem}
+  .portal-fine a{color:var(--accent-2);border-bottom:1px solid color-mix(in srgb, var(--accent-2) 40%, transparent)}
+  .portal-list{list-style:none;margin:0 0 .5rem}
+  .portal-list li{font-size:.88rem;color:var(--ink-dim);padding:.45em 0;border-top:1px solid var(--line)}
+  .portal-list li::before{content:"✦";color:var(--accent-2);margin-right:.7em;font-size:.7em}
+  .back-row{text-align:center;padding:0 0 5rem}
+  .back-row a{font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-dim)}
+  .back-row a:hover{color:var(--accent-2)}
+</style>
+</head>
+<body>
+
+<nav class="nav solid" id="nav">
+  <a href="index.html" class="nav-brand" data-cfg-html="brand">DJ&nbsp;MO&nbsp;<em>BLVD</em></a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="packages.html">Packages</a>
+    <a href="clients.html" style="color:var(--accent-2)">Client Login</a>
+  </div>
+  <div class="nav-right">
+    <button class="mode-toggle" aria-label="Toggle day/night mode"></button>
+    <a href="index.html#inquire" class="nav-cta" data-cfg="navInquire">Inquire</a>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about">About</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#reel">Reel</a>
+  <a href="packages.html">Packages</a>
+  <a href="index.html#reviews">Reviews</a>
+  <a href="index.html#faq">FAQ</a>
+  <a href="clients.html">Client Login</a>
+  <a href="index.html#inquire">Inquire</a>
+</div>
+
+<main>
+  <header class="portal-hero">
+    <h1 data-cfg-html="portalTitle">Client <em>portal</em></h1>
+    <p data-cfg="portalBody">Already booked with DJ Mo? Log in to your planning portal to build your timeline, lock in must-plays, and coordinate every moment of your event.</p>
+  </header>
+
+  <div class="portal-grid">
+    <!-- ── DJ Event Planner client login (static embed) ── -->
+    <section class="portal-card">
+      <h2 data-cfg="portalLoginTitle">Log in</h2>
+      <p class="sub" data-cfg="portalLoginSub">Your planning portal — timelines, playlists, payments, and paperwork in one place.</p>
+      <form method="post" action="https://blvddjs.djmoblvd.com/clientlogon.asp?djidnumber=25786">
+        <label for="cl-user">Username</label>
+        <input type="text" id="cl-user" name="username" autocomplete="username" autocapitalize="none">
+        <label for="cl-pass">Password</label>
+        <input type="password" id="cl-pass" name="password" autocomplete="current-password">
+        <input type="submit" name="submit" value="Log On" class="portal-btn" data-cfg-val="portalLoginBtn">
+      </form>
+      <p class="portal-fine"><a href="https://blvddjs.djmoblvd.com/sendpassword.asp?typeoflogon=client" target="_blank" rel="noopener" data-cfg="portalForgot">Forgot your password?</a></p>
+    </section>
+
+    <!-- ── guest song requests ── -->
+    <section class="portal-card">
+      <h2 data-cfg="portalGuestTitle">Guest song requests</h2>
+      <p class="sub" data-cfg="portalGuestSub">Coming to an event DJ Mo is playing? Drop your song requests ahead of time.</p>
+      <ul class="portal-list">
+        <li>Request songs before the event</li>
+        <li>Vote on what gets played</li>
+        <li>No account needed</li>
+      </ul>
+      <a class="portal-btn ghost" href="https://blvddjs.djmoblvd.com/requests.asp?djidnumber=25786" target="_blank" rel="noopener" data-cfg="portalGuestBtn">Open the request system →</a>
+      <p class="portal-fine" data-cfg-html="portalNotBooked">Not booked yet? <a href="index.html#inquire">Check your date here</a>.</p>
+    </section>
+  </div>
+
+  <div class="back-row"><a href="index.html" data-cfg="backToSite">← Back to the main site</a></div>
+</main>
+
+<footer class="footer">
+    <div class="footer-socials"></div>
+  <p data-cfg="footerLine">DJ Mo Blvd LLC · Las Vegas, NV</p>
+  <p class="footer-fine" data-cfg="footerFine">© DJ Mo Blvd LLC. All rights reserved.</p>
+</footer>
+
+<script src="js/config.js"></script>
+<script>const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();</script>
+</body>
+</html>

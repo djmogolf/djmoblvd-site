@@ -1,0 +1,11 @@
+{
+  "_readme": "Synced from DJ Event Planner iCal. Re-sync: double-click sync-calendar.command (or ask Claude). Feed URL lives in site-config.json (icalUrl).",
+  "syncedAt": "2026-06-11",
+  "booked": [
+    "2026-06-14",
+    "2026-07-31",
+    "2026-08-01",
+    "2026-08-02",
+    "2027-03-22"
+  ]
+}
