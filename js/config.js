@@ -7,7 +7,8 @@
 window.SITE_CONFIG_READY = (async () => {
   let cfg = {};
   try {
-    cfg = await (await fetch('assets/data/site-config.json', { cache: 'no-cache' })).json();
+    const _v = window.__ASSET_V ? ('?v=' + window.__ASSET_V) : '';
+    cfg = await (await fetch('assets/data/site-config.json' + _v, { cache: 'no-cache' })).json();
   } catch (e) { console.warn('site-config.json not loaded; static fallback HTML stays'); }
 
   // admin preview override
