@@ -29,7 +29,7 @@
     "venuesTitle": "Rooms DJ Mo has rocked",
     "venuesNote": "From ballroom weddings to stadium-scale corporate events — and destination dates from Miami Beach to Northern California.",
     "galleryCta": "Tag @djmoblvd to be featured on our Instagram",
-    "reelMore": "Want more? lifestyle on YouTube →",
+    "reelMore": "",
     "availLede": "",
     "availBody": " Lock it in before someone else does — popular dates go fast 6–12 months out.",
     "reviewsTrust": "★★★★★  100% recommended · Featured on The Knot",
@@ -525,7 +525,7 @@
       }
     ]
   },
-  "savedAt": 1781649789145,
+  "savedAt": 1781715564049,
   "header": {
     "index": {
       "height": 240,
