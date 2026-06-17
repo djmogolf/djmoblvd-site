@@ -554,5 +554,8 @@
     "priceRange": "$2,000 - $4,000",
     "ratingValue": "5.0",
     "reviewCount": "35"
+  },
+  "sections": {
+    "reel": false
   }
 }
