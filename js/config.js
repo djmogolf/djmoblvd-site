@@ -25,6 +25,18 @@ window.SITE_CONFIG_READY = (async () => {
 
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
+  /* ── section visibility (show / hide whole sections from the editor) ──
+     cfg.sections maps a section id (e.g. "reel") to true/false. Anything
+     set to false is hidden from visitors but stays in the markup, so it
+     can be switched back on any time from admin.html. */
+  const hiddenSections = new Set(
+    Object.entries(cfg.sections || {}).filter(([, on]) => on === false).map(([id]) => id)
+  );
+  hiddenSections.forEach(id => {
+    const sec = document.getElementById(id);
+    if (sec) sec.style.display = 'none';
+  });
+
   /* ── theme + day/night mode ── */
   function applyTheme(t) {
     const root = document.documentElement.style;
@@ -303,7 +315,12 @@ window.SITE_CONFIG_READY = (async () => {
   if (Array.isArray(cfg.nav) && cfg.nav.length) {
     const onIndex = /(^|\/)(index\.html)?$/.test(location.pathname);
     const fix = h => onIndex ? h.replace(/^index\.html(#|$)/, (m, a) => a ? '#' : '#top').replace(/^#$/, '#top') : h;
-    const links = cfg.nav.map(n => `<a href="${esc(fix(n.href))}">${esc(n.label)}</a>`).join('');
+    // drop any tab that points to a section that's currently hidden
+    const visibleNav = cfg.nav.filter(n => {
+      const m = String(n.href).match(/#([\w-]+)$/);
+      return !(m && hiddenSections.has(m[1]));
+    });
+    const links = visibleNav.map(n => `<a href="${esc(fix(n.href))}">${esc(n.label)}</a>`).join('');
     document.querySelectorAll('.nav-links').forEach(el => { el.innerHTML = links; });
     const menu = document.getElementById('mobileMenu');
     if (menu) menu.innerHTML = links + `<a href="${onIndex ? '#inquire' : 'index.html#inquire'}">Inquire</a>`;
