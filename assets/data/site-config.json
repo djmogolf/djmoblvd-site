@@ -144,7 +144,7 @@
     }
   },
   "mainReel": {
-    "src": "assets/video/reel.mp4",
+    "src": "",
     "poster": "assets/video/poster.jpg"
   },
   "_v": 2,
@@ -362,12 +362,12 @@
       "a": "Yes — professional emcee services come standard in every package. Grand entrance, toasts, first dance, send-off: every moment is announced and on time."
     },
     {
-      "q": "Can you cover our ceremony too?",
-      "a": "The Paradise package and up include on-site ceremony music — so every word is heard in the back row."
+      "q": "Is a Retainer required to secure a booking?",
+      "a": "Yes, a retainer is necessary to confirm your booking. The exact amount and payment schedule will be\ndiscussed during the booking process."
     },
     {
-      "q": "What does pricing look like?",
-      "a": "Three packages — Anthem from $2,000, Paradise from $2,500, and The Lakes from $4,000 — plus à la carte add-ons like photo booth, cold sparklers, and dancing on the clouds. See the full <a href=\"packages.html\">packages & pricing page</a>."
+      "q": "What happens if our event extends beyond the booked time?",
+      "a": "Flexibility is key! If your celebration extends, additional time can often be arranged on the day itself. We'll\ndiscuss options during the planning process and ensure everything runs smoothly."
     },
     {
       "q": "Do you travel outside Las Vegas?",
@@ -525,7 +525,7 @@
       }
     ]
   },
-  "savedAt": 1781715564049,
+  "savedAt": 1781759763644,
   "header": {
     "index": {
       "height": 240,
