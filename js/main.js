@@ -257,4 +257,29 @@ gsap.utils.toArray('.insta-item, .vibe, .avail-cal').forEach((el, i) => {
 /* ── misc ── */
 const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+/* ── cross-page anchors: arriving at index.html#section from another page ──
+   Lenis owns the scroll position and the pinned hero shifts every section's
+   real offset, so the browser's native hash jump lands in the wrong place.
+   Once the loader has lifted and the layout has settled, scroll there ourselves.
+   (Same-page clicks are handled live by the delegated anchor handler above.) */
+(function handleEntryHash(){
+  const hash = location.hash;
+  if (!hash || hash === '#' || hash === '#top') return;
+  if (!document.querySelector(hash)) return;            // unknown / hidden section
+  const land = () => {
+    const target = document.querySelector(hash);
+    if (!target) return;
+    ScrollTrigger.refresh();                            // recompute offsets past the pinned hero
+    lenis.scrollTo(target, { offset: 0, immediate: true, force: true });
+  };
+  const wait = setInterval(() => {
+    if (loaderEl.classList.contains('done')) {
+      clearInterval(wait);
+      setTimeout(land, 350);                            // after the unveil
+      setTimeout(land, 1000);                           // correct for late-loading images
+    }
+  }, 60);
+  setTimeout(() => clearInterval(wait), 11000);         // safety: never poll forever
+})();
+
 })();
