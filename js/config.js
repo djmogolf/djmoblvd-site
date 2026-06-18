@@ -74,7 +74,8 @@ window.SITE_CONFIG_READY = (async () => {
 
   /* ── header size & position, per page (editable in admin) ── */
   const pageKey = /packages\.html$/.test(location.pathname) ? 'packages'
-                : /clients\.html$/.test(location.pathname) ? 'clients' : 'index';
+                : /clients\.html$/.test(location.pathname) ? 'clients'
+                : /faq\.html$/.test(location.pathname) ? 'faq' : 'index';
   Object.entries(cfg.header || {}).forEach(([page, h]) => {
     const root = document.documentElement.style;
     if (h.height > 0) root.setProperty(`--hd-h-${page}`, h.height + 'vh');
@@ -372,7 +373,7 @@ window.SITE_CONFIG_READY = (async () => {
       }));
     }
     graphs.push(biz);
-    if (pageKey === 'index' && Array.isArray(cfg.faq) && cfg.faq.length) {
+    if (pageKey === 'faq' && Array.isArray(cfg.faq) && cfg.faq.length) {
       graphs.push({
         '@type': 'FAQPage',
         mainEntity: cfg.faq.map(f => ({
@@ -387,7 +388,7 @@ window.SITE_CONFIG_READY = (async () => {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
-          { '@type': 'ListItem', position: 2, name: pageKey === 'packages' ? 'Packages & Pricing' : 'Client Portal', item: base + '/' + pageKey + '.html' },
+          { '@type': 'ListItem', position: 2, name: pageKey === 'packages' ? 'Packages & Pricing' : pageKey === 'faq' ? 'FAQ' : 'Client Portal', item: base + '/' + pageKey + '.html' },
         ],
       });
     }
