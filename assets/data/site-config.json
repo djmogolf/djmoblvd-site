@@ -19,8 +19,8 @@
     "heroTitle1": "DJ MO",
     "heroTitle2": "BLVD",
     "marquee": "Weddings ✦ Corporate Events ✦ Private Parties ✦ Las Vegas ✦ ",
-    "aboutP1": "Mo was 20 years old when he downloaded a DJ app onto his iPad. Playing in front of people brought out a different element — and DJ'ing became the thing that truly makes him happy. He cut his teeth at Helen Fitzgerald's in St. Louis, learning the fundamentals of being a great MC and DJ, before taking his craft into the wedding industry.",
-    "aboutP2": "Today, based in Las Vegas, he blends those fundamentals with a style all his own. His song selection, energy, enthusiasm, and versatility make him one of the most entertaining wedding and corporate event DJs in the city.",
+    "aboutP1": "Mo’s journey behind the decks began at age twenty with a simple iPad app and a curiosity for mixing beats. But the moment he performed in front of a live crowd, everything changed. He realized that DJing wasn't just about playing music—it was about connecting with people, reading their energy, and bringing a room to life.\n\nHe honed his fundamentals in the high-energy atmosphere of St. Louis's iconic Helen Fitzgerald’s, mastering the art of seamless MCing and crowd control. Driven by a desire to craft more meaningful, tailored experiences, he transitioned his talent into the wedding and corporate events industry.",
+    "aboutP2": "Today, based in Las Vegas, Mo has refined his craft into a style entirely his own. Blending technical versatility with magnetic energy and enthusiasm, he doesn't just play for crowds—he reads them. Whether it’s an elegant wedding or a high-stakes corporate gathering, Mo aligns with planners and vendors behind the scenes to ensure every transition is flawless and every moment feels like a core memory.",
     "aboutQuote": "Anyone can put together chart-topping songs and press play — but it takes a <em>special set of ears</em> to hear sounds before loading them into the deck.",
     "aboutQuoteBy": "— DJ Mo",
     "aboutBadge": "Est. St. Louis → Las Vegas",
@@ -55,7 +55,7 @@
   "images": {
     "aboutPortrait": "assets/img/7cea8724-6040-4b8d-b558-ffa1694414c7.jpg",
     "serviceWedding": "assets/img/img_0138.jpg",
-    "serviceCorporate": "assets/img/img-2014.jpg",
+    "serviceCorporate": "assets/img/6858121a-f92d-4ba4-916b-1def9615760d.jpg",
     "servicePrivate": "assets/img/img_7726.jpg",
     "gallery": [
       "assets/img/309039795_3364987257067188_8626491957092069951_n.jpg",
@@ -69,9 +69,9 @@
       "assets/img/img_5284.jpg"
     ],
     "insta": [
-      "assets/img/img_7726.jpg",
-      "assets/img/6858121a-f92d-4ba4-916b-1def9615760d.jpg",
-      "assets/img/kaylabowenphotography-261.jpg",
+      "assets/img/untitled-design.png",
+      "assets/img/img_1383.jpg",
+      "assets/img/untitled-design-copy.png",
       "assets/img/img_7396.jpg",
       "assets/img/img_9156.jpg",
       "assets/img/unadjustednonraw_thumb_25b9.jpg"
@@ -190,7 +190,7 @@
     },
     {
       "label": "FAQ",
-      "href": "faq.html"
+      "href": "index.html#faq"
     },
     {
       "label": "Client Login",
@@ -299,7 +299,8 @@
       "Hakkasan",
       "The Summit ",
       "Green Valley Ranch ",
-      "Dragon Ridge "
+      "Dragon Ridge ",
+      "Las Vegas Country Club"
     ],
     "rowB": [
       "Golden Nugget",
@@ -309,7 +310,8 @@
       "Delano",
       "Brooklyn Bowl",
       "Cascata Golf Club",
-      "Dragon Ridge"
+      "Red Rock ",
+      "Durango"
     ]
   },
   "process": [
@@ -376,6 +378,10 @@
     {
       "q": "What is \"Beyond The Aisle\"?",
       "a": "A content-creation add-on included in The Lakes package: They specialize in telling unforgettable wedding stories through short form video and photo content all captured on an iPhone. "
+    },
+    {
+      "q": "",
+      "a": ""
     }
   ],
   "socials": [
@@ -525,7 +531,7 @@
       }
     ]
   },
-  "savedAt": 1781759763644,
+  "savedAt": 1781765053919,
   "header": {
     "index": {
       "height": 240,
