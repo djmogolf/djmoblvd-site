@@ -407,7 +407,11 @@
     },
     {
       "label": "Spotify",
-      "url": "https://open.spotify.com/search/DJ%20Mo%20Blvd"
+      "url": "https://open.spotify.com/album/1vHRTHHUMXfOvvtmCzPuPg"
+    },
+    {
+      "label": "Apple Music",
+      "url": "https://music.apple.com/us/album/vegas-adrenaline-single/6781368228"
     }
   ],
   "packagesPage": {
@@ -531,7 +535,7 @@
       }
     ]
   },
-  "savedAt": 1781765279706,
+  "savedAt": 1781987761134,
   "header": {
     "index": {
       "height": 240,
