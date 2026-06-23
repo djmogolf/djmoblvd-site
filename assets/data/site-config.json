@@ -190,7 +190,7 @@
     },
     {
       "label": "FAQ",
-      "href": "index.html#faq"
+      "href": "faq.html"
     },
     {
       "label": "Client Login",
@@ -380,8 +380,12 @@
       "a": "A content-creation add-on included in The Lakes package: They specialize in telling unforgettable wedding stories through short form video and photo content all captured on an iPhone. "
     },
     {
-      "q": "",
-      "a": ""
+      "q": "How far in advance should I book?",
+      "a": "As early as possible to secure your date — popular dates fill up quickly. We advise booking at least 6–12 months in advance."
+    },
+    {
+      "q": "Can I customize elements within the packages?",
+      "a": "Absolutely. The packages are designed as a foundation, and we welcome customization to tailor the experience — mix in any à la carte add-on."
     }
   ],
   "socials": [
@@ -524,16 +528,7 @@
         "price": "$625 / hour"
       }
     ],
-    "pkgFaq": [
-      {
-        "q": "How far in advance should I book?",
-        "a": "As early as possible to secure your date — popular dates fill up quickly. We advise booking at least 6–12 months in advance."
-      },
-      {
-        "q": "Can I customize elements within the packages?",
-        "a": "Absolutely. The packages are designed as a foundation, and we welcome customization to tailor the experience — mix in any à la carte add-on."
-      }
-    ]
+    "pkgFaq": []
   },
   "savedAt": 1781987761134,
   "header": {
