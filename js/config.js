@@ -146,7 +146,7 @@ window.SITE_CONFIG_READY = (async () => {
   /* ── services ── */
   // Default click targets by title — guarantees the cards stay clickable even
   // if an editor save drops the per-service link from the config.
-  const SERVICE_LINKS = { 'Weddings': 'packages.html', 'Private Events': 'packages.html', 'Corporate': '#inquire' };
+  const SERVICE_LINKS = { 'Weddings': 'packages.html', 'Private Events': '#inquire', 'Corporate': '#inquire' };
   const svcGrid = document.querySelector('.services-grid');
   if (svcGrid && Array.isArray(cfg.services)) {
     svcGrid.innerHTML = cfg.services.map(s => {
