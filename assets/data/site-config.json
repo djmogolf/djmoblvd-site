@@ -440,7 +440,7 @@
       },
       {
         "name": "Paradise",
-        "price": "$3,000",
+        "price": "$2,500",
         "flag": "Signature",
         "features": [
           "DJ services",
@@ -530,7 +530,7 @@
     ],
     "pkgFaq": []
   },
-  "savedAt": 1787156655481,
+  "savedAt": 1787426626417,
   "header": {
     "index": {
       "height": 240,
