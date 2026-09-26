@@ -296,15 +296,32 @@
   <!-- ══════════ INQUIRE ══════════ -->
   <section class="inquire" id="inquire">
 
-    <!-- ── DJ Event Planner — Information Request (static embed) ── -->
+    <!-- ── Information Request (Encore form, embedded from book.djmoblvd.com) ── -->
     <div class="djep" id="request">
       <h3 class="djep-title" data-cfg="djepTitle">Information request</h3>
       <p class="djep-sub" data-cfg="djepSub">Fill this out and it lands directly in DJ Mo's event system — you'll hear back fast.</p>
-<!-- BEGIN DJEVENTPLANNER CODE -->
-<script src="https://blvddjs.djmoblvd.com/check_req_info_form.js"></script>
-<script src="https://blvddjs.djmoblvd.com/request_information.asp?djidnumber=25786&source=jswebsite&action=get_responsive_code"></script>
-<noscript><a href="https://blvddjs.djmoblvd.com/request_information.asp?djidnumber=25786">Click Here For Request Information Form</a></noscript>
-<!-- END DJEVENTPLANNER CODE -->
+<!-- BEGIN ENCORE INQUIRY FORM -->
+<iframe id="djmo-inquiry"
+  src="https://book.djmoblvd.com/inquire?embed=1"
+  title="Information request"
+  style="width:100%;height:1180px;border:0"></iframe>
+<script>
+(function () {
+  var frame = document.getElementById('djmo-inquiry');
+  window.addEventListener('message', function (event) {
+    if (event.origin !== 'https://book.djmoblvd.com' || event.source !== frame.contentWindow) return;
+    var data = event.data || {};
+    if (data.type === 'encore:inquiry:height' && data.height > 0) {
+      frame.style.height = data.height + 'px';
+    }
+    if (data.type === 'encore:inquiry:submitted') {
+      frame.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+})();
+</script>
+<noscript><a href="https://book.djmoblvd.com/inquire">Open the information request form</a></noscript>
+<!-- END ENCORE INQUIRY FORM -->
     </div>
   </section>
 
