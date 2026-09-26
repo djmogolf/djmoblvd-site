@@ -159,7 +159,7 @@
     "night": "blvd-green-dark",
     "day": "blvd-classic-light"
   },
-  "inquireUrl": "https://blvddjs.djmoblvd.com/request_information.asp",
+  "inquireUrl": "https://book.djmoblvd.com/inquire",
   "spacing": {
     "section": 7.5
   },
