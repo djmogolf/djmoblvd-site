@@ -11,10 +11,13 @@ window.SITE_CONFIG_READY = (async () => {
     cfg = await (await fetch('assets/data/site-config.json' + _v, { cache: 'no-cache' })).json();
   } catch (e) { console.warn('site-config.json not loaded; static fallback HTML stays'); }
 
-  // admin preview override
+  // admin preview override (only ever present in the editor owner's own browser)
   try {
     const ov = JSON.parse(localStorage.getItem('djmo-config-preview') || 'null');
-    if (ov) { cfg = deepMerge(cfg, ov); console.info('djmo: admin preview active'); }
+    if (ov && ov._v === 3 && ov.base && ov.cfg) {
+      // new-style draft: re-apply only what was edited, on top of the newest file
+      cfg = applyEdits(cfg, ov.base, ov.cfg); console.info('djmo: admin preview active');
+    } else if (ov) { cfg = deepMerge(cfg, ov); console.info('djmo: admin preview active'); }
   } catch (e) {}
   function deepMerge(a, b) {
     if (Array.isArray(b) || typeof b !== 'object' || b === null) return b;
@@ -22,6 +25,25 @@ window.SITE_CONFIG_READY = (async () => {
     for (const k of Object.keys(b)) out[k] = deepMerge(a?.[k], b[k]);
     return out;
   }
+  function applyEdits(cur, base, mine) {   // same 3-way merge as admin.html
+    const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
+    const isObj = v => !!v && typeof v === 'object' && !Array.isArray(v);
+    if (same(base, mine)) return cur;
+    if (!isObj(mine) || !isObj(base) || !isObj(cur)) return mine;
+    const out = { ...cur };
+    for (const k of new Set([...Object.keys(base), ...Object.keys(mine)])) {
+      if (!(k in mine)) { delete out[k]; continue; }
+      out[k] = applyEdits(cur[k], base[k], mine[k]);
+    }
+    return out;
+  }
+  // Browsers that block site storage THROW on any access. Every read/write goes
+  // through these so that can never stop the rest of the page from rendering
+  // (it used to kill everything below — including the phone menu).
+  const store = {
+    get: k => { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set: (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} },
+  };
 
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
@@ -45,7 +67,7 @@ window.SITE_CONFIG_READY = (async () => {
   }
   const presets = cfg.themePresets || {};
   const modes = cfg.modes || {};
-  const savedMode = localStorage.getItem('djmo-mode'); // 'day' | 'night' | null
+  const savedMode = store.get('djmo-mode'); // 'day' | 'night' | null
   function themeForMode(mode) { return presets[modes[mode]] || null; }
   let currentMode = savedMode || (modes.night && cfg.theme?.preset === modes.day ? 'day' : 'night');
   applyTheme(savedMode ? (themeForMode(savedMode) || cfg.theme) : cfg.theme);
@@ -58,7 +80,7 @@ window.SITE_CONFIG_READY = (async () => {
     paint();
     btn.addEventListener('click', () => {
       currentMode = currentMode === 'night' ? 'day' : 'night';
-      localStorage.setItem('djmo-mode', currentMode);
+      store.set('djmo-mode', currentMode);
       const t = themeForMode(currentMode);
       if (t) applyTheme(t);
       document.querySelectorAll('.mode-toggle').forEach(b => { b.innerHTML = currentMode === 'night' ? SUN : MOON; b.title = currentMode === 'night' ? 'Day mode' : 'Night mode'; });
@@ -181,6 +203,12 @@ window.SITE_CONFIG_READY = (async () => {
   });
 
   /* ── main reel video ── */
+  // Validate FIRST: a main reel that isn't a real video file (e.g. an Instagram
+  // page link pasted in the editor) keeps the HTML default instead of breaking.
+  // (This check used to run after the video had already been pointed at it.)
+  if (cfg.mainReel && (typeof cfg.mainReel === 'string' || !String(cfg.mainReel.src || '').match(/\.(mp4|webm|mov)(\?|$)/i))) {
+    cfg.mainReel = null;
+  }
   const mr = cfg.mainReel || {};
   const reelVideoEl = document.getElementById('reelVideo');
   if (reelVideoEl && mr.src) {
@@ -193,9 +221,6 @@ window.SITE_CONFIG_READY = (async () => {
   // normalize: a plain Instagram URL (e.g. pasted in the admin) becomes {link} and is skipped as a video
   if (Array.isArray(cfg.reels)) {
     cfg.reels = cfg.reels.map(r => typeof r === 'string' ? { src: '', link: r, label: '' } : r).filter(r => r && r.src);
-  }
-  if (cfg.mainReel && (typeof cfg.mainReel === 'string' || !String(cfg.mainReel.src || '').match(/\.(mp4|webm|mov)(\?|$)/i))) {
-    cfg.mainReel = null; // keep the HTML default instead of a broken source
   }
   const grid = document.getElementById('reelsGrid');
   if (grid && Array.isArray(cfg.reels) && cfg.reels.length) {
@@ -350,7 +375,8 @@ window.SITE_CONFIG_READY = (async () => {
       priceRange: seo.priceRange || '$2,000 - $4,000',
       address: { '@type': 'PostalAddress', addressLocality: seo.city || 'Las Vegas', addressRegion: seo.state || 'NV', addressCountry: 'US' },
       areaServed: { '@type': 'City', name: seo.city || 'Las Vegas' },
-      sameAs: (cfg.socials || []).map(s => s.url).filter(u => !u.includes('google.com/search')),
+      // (a social link with a blank URL used to throw here and drop ALL of Google's business data)
+      sameAs: (cfg.socials || []).map(s => s && s.url).filter(u => u && !u.includes('google.com/search')),
     };
     if (seo.ratingValue && seo.reviewCount) {
       biz.aggregateRating = { '@type': 'AggregateRating', ratingValue: seo.ratingValue, reviewCount: seo.reviewCount, bestRating: '5' };
@@ -413,7 +439,8 @@ window.SITE_CONFIG_READY = (async () => {
       close();
       const href = a.getAttribute('href');
       if (href.startsWith('#') && window.lenis) {
-        const target = document.querySelector(href);
+        let target = null;
+        try { target = document.getElementById(decodeURIComponent(href.slice(1))); } catch (e) {}
         if (target) window.lenis.scrollTo(target, { duration: 1.2 });
       }
     }));

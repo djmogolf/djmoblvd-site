@@ -160,10 +160,13 @@ lenis.on('scroll', ({ scroll }) => {
   lastY = scroll;
 });
 // anchor links through Lenis (delegated — works for config-rendered nav too)
+// Anchors are looked up by id, not as a CSS selector: a fragment like "#_=_" or
+// "#2024" is not a valid selector and would throw instead of being ignored.
+const byHash = h => { try { return document.getElementById(decodeURIComponent(h.slice(1))); } catch (e) { return null; } };
 document.addEventListener('click', e => {
   const a = e.target.closest('a[href^="#"]');
   if (!a) return;
-  const target = document.querySelector(a.getAttribute('href'));
+  const target = byHash(a.getAttribute('href'));
   if (target) { e.preventDefault(); lenis.scrollTo(target, { offset: 0, duration: 1.4 }); }
 });
 
@@ -265,9 +268,9 @@ const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent =
 (function handleEntryHash(){
   const hash = location.hash;
   if (!hash || hash === '#' || hash === '#top') return;
-  if (!document.querySelector(hash)) return;            // unknown / hidden section
+  if (!byHash(hash)) return;                            // unknown / hidden section
   const land = () => {
-    const target = document.querySelector(hash);
+    const target = byHash(hash);
     if (!target) return;
     ScrollTrigger.refresh();                            // recompute offsets past the pinned hero
     lenis.scrollTo(target, { offset: 0, immediate: true, force: true });
