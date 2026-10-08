@@ -97,7 +97,8 @@ window.SITE_CONFIG_READY = (async () => {
   /* ── header size & position, per page (editable in admin) ── */
   const pageKey = /packages\.html$/.test(location.pathname) ? 'packages'
                 : /clients\.html$/.test(location.pathname) ? 'clients'
-                : /faq\.html$/.test(location.pathname) ? 'faq' : 'index';
+                : /faq\.html$/.test(location.pathname) ? 'faq'
+                : /-dj-las-vegas\.html$/.test(location.pathname) ? 'landing' : 'index';
   Object.entries(cfg.header || {}).forEach(([page, h]) => {
     const root = document.documentElement.style;
     if (h.height > 0) root.setProperty(`--hd-h-${page}`, h.height + 'vh');
@@ -168,7 +169,7 @@ window.SITE_CONFIG_READY = (async () => {
   /* ── services ── */
   // Default click targets by title — guarantees the cards stay clickable even
   // if an editor save drops the per-service link from the config.
-  const SERVICE_LINKS = { 'Weddings': 'packages.html', 'Private Events': '#inquire', 'Corporate': '#inquire' };
+  const SERVICE_LINKS = { 'Weddings': 'wedding-dj-las-vegas.html', 'Private Events': '#inquire', 'Corporate': 'corporate-dj-las-vegas.html' };
   const svcGrid = document.querySelector('.services-grid');
   if (svcGrid && Array.isArray(cfg.services)) {
     svcGrid.innerHTML = cfg.services.map(s => {
@@ -363,6 +364,8 @@ window.SITE_CONFIG_READY = (async () => {
       if (seo.title) document.title = seo.title;
       if (seo.description) document.querySelector('meta[name="description"]')?.setAttribute('content', seo.description);
     }
+    // pages ship their schema as static HTML (crawlers don't need to run JS) — don't add a duplicate
+    if (document.querySelector('script[data-static-ld]')) throw 0;
     const graphs = [];
     const biz = {
       '@type': 'EntertainmentBusiness',
@@ -422,7 +425,7 @@ window.SITE_CONFIG_READY = (async () => {
     ld.type = 'application/ld+json';
     ld.textContent = JSON.stringify({ '@context': 'https://schema.org', '@graph': graphs });
     document.head.appendChild(ld);
-  } catch (e) { console.warn('SEO schema skipped:', e); }
+  } catch (e) { if (e !== 0) console.warn('SEO schema skipped:', e); }
 
   /* ── mobile burger menu (all pages) ── */
   const burger = document.querySelector('.nav-burger');
