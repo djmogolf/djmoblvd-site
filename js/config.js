@@ -98,7 +98,10 @@ window.SITE_CONFIG_READY = (async () => {
   const pageKey = /packages\.html$/.test(location.pathname) ? 'packages'
                 : /clients\.html$/.test(location.pathname) ? 'clients'
                 : /faq\.html$/.test(location.pathname) ? 'faq'
-                : /-dj-las-vegas\.html$/.test(location.pathname) ? 'landing' : 'index';
+                : /-dj-las-vegas\.html$/.test(location.pathname) ? 'landing'
+                : /privacy\.html$/.test(location.pathname) ? 'privacy'
+                : /terms\.html$/.test(location.pathname) ? 'terms'
+                : /accessibility\.html$/.test(location.pathname) ? 'accessibility' : 'index';
   Object.entries(cfg.header || {}).forEach(([page, h]) => {
     const root = document.documentElement.style;
     if (h.height > 0) root.setProperty(`--hd-h-${page}`, h.height + 'vh');
@@ -226,7 +229,7 @@ window.SITE_CONFIG_READY = (async () => {
   const grid = document.getElementById('reelsGrid');
   if (grid && Array.isArray(cfg.reels) && cfg.reels.length) {
     grid.innerHTML = cfg.reels.map((r, i) => `
-      <figure class="reel-card" data-reel="${i}">
+      <figure class="reel-card" data-reel="${i}" tabindex="0" role="button" aria-pressed="false" aria-label="${esc((r.label ? r.label + ' — ' : '') + 'video clip ' + (i + 1) + ': turn sound on or off')}">
         <video src="${esc(r.src)}" ${r.poster ? `poster="${esc(r.poster)}"` : ''} muted loop playsinline preload="metadata"></video>
         <div class="reel-card-ui">
           <span class="reel-card-label">${esc(r.label || '')}</span>
@@ -240,17 +243,22 @@ window.SITE_CONFIG_READY = (async () => {
     const io = new IntersectionObserver(entries => entries.forEach(en => {
       const vid = en.target.querySelector('video');
       if (en.isIntersecting) vid.play().catch(() => {});
-      else { vid.pause(); vid.muted = true; en.target.classList.remove('sound-on'); }
+      else { vid.pause(); vid.muted = true; en.target.classList.remove('sound-on'); en.target.setAttribute('aria-pressed', 'false'); }
     }), { threshold: 0.35 });
     cards.forEach(c => {
       io.observe(c);
       const vid = c.querySelector('video');
       c.addEventListener('click', () => {
         if (vid.muted) {
-          cards.forEach(o => { const ov = o.querySelector('video'); ov.muted = true; o.classList.remove('sound-on'); });
+          cards.forEach(o => { const ov = o.querySelector('video'); ov.muted = true; o.classList.remove('sound-on'); o.setAttribute('aria-pressed', 'false'); });
           vid.muted = false; vid.play().catch(() => {});
-          c.classList.add('sound-on');
-        } else { vid.muted = true; c.classList.remove('sound-on'); }
+          c.classList.add('sound-on'); c.setAttribute('aria-pressed', 'true');
+        } else { vid.muted = true; c.classList.remove('sound-on'); c.setAttribute('aria-pressed', 'false'); }
+      });
+      // keyboard: Enter or Space toggles the sound, same as a click or tap
+      c.addEventListener('keydown', e => {
+        if (e.target !== c || (e.key !== 'Enter' && e.key !== ' ')) return;
+        e.preventDefault(); c.click();
       });
     });
   }
@@ -417,7 +425,7 @@ window.SITE_CONFIG_READY = (async () => {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: base + '/' },
-          { '@type': 'ListItem', position: 2, name: pageKey === 'packages' ? 'Packages & Pricing' : pageKey === 'faq' ? 'FAQ' : 'Client Portal', item: base + '/' + pageKey + '.html' },
+          { '@type': 'ListItem', position: 2, name: ({ packages: 'Packages & Pricing', faq: 'FAQ', clients: 'Client Portal', privacy: 'Privacy Policy', terms: 'Terms & Conditions', accessibility: 'Accessibility Statement' })[pageKey], item: base + '/' + pageKey + '.html' },
         ],
       });
     }
