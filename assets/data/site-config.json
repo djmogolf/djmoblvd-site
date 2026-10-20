@@ -257,7 +257,7 @@
       "features": [
         "On-site ceremony music",
         "Professional emcee",
-        "Dance floor lighting & up-lights",
+        "Dance floor light show & up-lights",
         "Unlimited consultations"
       ],
       "img": "serviceWedding"
@@ -281,7 +281,7 @@
       "features": [
         "Customized music playlist",
         "High-energy hosting",
-        "Dance floor lighting",
+        "Dance floor light show",
         "Online planning portal"
       ],
       "img": "servicePrivate"
@@ -434,7 +434,7 @@
           "Professional emcee",
           "Unlimited pre-wedding consultations",
           "Up to four hours of reception services",
-          "Dance floor lighting",
+          "Dance floor light show",
           "Online planning coordination"
         ]
       },
@@ -449,7 +449,7 @@
           "On-site ceremony music",
           "Cocktail hour",
           "Six hours of services",
-          "Dance floor lighting",
+          "Dance floor light show",
           "Online planning coordination"
         ]
       },
@@ -464,7 +464,7 @@
           "On-site ceremony music",
           "Cocktail hour",
           "Six hours of services",
-          "Dance floor lighting",
+          "Dance floor light show",
           "10 up-lights",
           "Content creator — Beyond The Aisle",
           "Custom event + online planning coordination"
@@ -473,7 +473,7 @@
     ],
     "alacarte": [
       {
-        "name": "Dance floor lights",
+        "name": "Dance floor light show",
         "price": "$350"
       },
       {
